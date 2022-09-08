@@ -1,2 +1,2 @@
-#include<stdio.h>
-[A[A[A
+#!/bin/bash
+gcc -E $CFILE
