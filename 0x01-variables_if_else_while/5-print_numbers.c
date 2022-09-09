@@ -8,16 +8,12 @@
 
 int main(void)
 {
-	int n;
+	int i;
 
-	for (n = 97; n <= 122; n++)
+	for (i = 0; i <= 9; i++)
 	{
-		if (n == 'q' || n == 'e')
-		{
-			continue;
-		}
-		putchar(n);
+		printf("%d\n", i);
 	}
-	putchar('\n');
 	return (0);
 }
+
