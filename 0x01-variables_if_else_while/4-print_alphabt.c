@@ -12,12 +12,16 @@ int main(void)
 
 	for (n = 97; n <= 122; n++)
 
-		if (n == 'q' || n == 'e')
+		{
+			if (n == 'q' || n == 'e')
 
-			continue;
+				{
 
-		putchar(n);
+				continue;
 
+				}
+			putchar(n);
+		}
 	putchar('\n');
 	return (0);
 }
