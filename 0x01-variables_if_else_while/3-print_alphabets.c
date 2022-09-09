@@ -11,8 +11,8 @@ int main(void)
 	int n, m;
 
 	for (n = 97, m = 65; n <= 122, m = 90; m++, n++)
-		putchar(n)
-		putchar(m)
-	putchar('\n')
-	return (0)
+		putchar(n);
+		putchar(m);
+	putchar('\n');
+	return (0);
 }
