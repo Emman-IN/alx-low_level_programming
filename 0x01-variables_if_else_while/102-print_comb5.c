@@ -11,9 +11,9 @@ int main(void)
 	int outer;
 	int inner;
 
-	for (int outer = 0; outer <= 99; outer++)
+	for (outer = 0; outer <= 99; outer++)
 	{
-		for (int inner = 1; inner <= 99; inner++)
+		for (inner = 1; inner <= 99; inner++)
 		{
 			if (outer != inner && outer < inner)
 			{
