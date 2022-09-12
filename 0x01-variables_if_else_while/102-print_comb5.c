@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success0
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success0
+ */
 
 int main(void)
 {
+	int outer;
+	int inner;
+
 	for (int outer = 0; outer <= 99; outer++)
 	{
 		for (int inner = 1; inner <= 99; inner++)
