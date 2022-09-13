@@ -6,9 +6,8 @@
  * Return: 0 Success always
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	n;
 
 	if (n >= 0)
 	{
