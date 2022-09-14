@@ -5,16 +5,17 @@
  * Return: Always 0 success
  */
 
-
-int main()
+int main(void)
 {
-	int first = 0;
-	int second = 1;
-	int i, new = 0, quantity = 50;
+	long first = 0;
+	long second = 1;
+	int i, quantity = 50;
+	long new = 0;
 
 	for (i = 0; i < quantity; i++)
 	{
-		printf("%u", new);
+		new = first + second;
+		printf("%lu", new);
 		first = second;
 		second = new;
 		new = first + second;
@@ -24,5 +25,7 @@ int main()
 			printf(" ");
 		}
 	}
+	printf("\n");
 	return (0);
 }
+
