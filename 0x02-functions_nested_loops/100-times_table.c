@@ -21,29 +21,29 @@ void print_times_table(int n)
 					last = k % 10;
 					if (k >= 0 && k < 10)
 					{
-						printf(" ");
-						printf(" ");
-						printf("%d", last);
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(last + '0');
 					}
 					else if (k >= 10 && k < 100)
 					{
-						printf(" ");
-						printf("%d", first);
-						printf("%d", last);
+						_putchar(' ');
+						_putchar(first + '0');
+						_putchar(last + '0');
 					}
 					else
 					{
 
-						printf("%d", first);
-						printf("%d", last);
+						_putchar(first + '0');
+						_putchar(last + '0');
 					}
 					if (j < n)
 					{
-						printf(",");
-						printf(" ");
+						_putchar(',');
+						_putchar(' ');
 					}
 				}
 			}
-		printf("\n");
+		_putchar('\n');
 	}
 }
