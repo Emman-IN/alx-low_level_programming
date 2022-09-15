@@ -12,9 +12,10 @@ int main(void)
 	int i, quantity = 98;
 	double new = 0;
 
+	new = first + second;
 	for (i = 0; i < quantity; i++)
 	{
-		new = first + second;
+
 		printf("%.0f", new);
 		first = second;
 		second = new;
