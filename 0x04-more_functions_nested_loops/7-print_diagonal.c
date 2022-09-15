@@ -17,6 +17,10 @@ void print_diagonal(int n)
 			for (j = 0; j < i; j++)
 			{
 				_putchar(' ');
+				/**
+				 * doesn't get executed on first iteration of i
+				 * j = i (both zero)
+				 */
 			}
 			_putchar('\\');
 			_putchar('\n');
