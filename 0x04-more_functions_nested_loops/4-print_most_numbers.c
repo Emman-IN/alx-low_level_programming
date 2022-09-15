@@ -3,19 +3,19 @@
 /**
  * print_numbers - print numbers 0 - 9
  * except 2 and 4
+ * Return: none
  */
 
-void print_numbers(void)
+t_numbers(void)
 {
-	int i;
+	int j;
 
-	for (i = 0; i < 10; i++)
+	for (j = 48; j <= 57; j++)
 	{
-		if (i == 2 || i == 4)
-		{
+		if (j == 50 || j == 52)
 			continue;
-		}
-		_putchar(i + '0');
+
+		_putchar(j);
 	}
-	_putchar('\n');
+	_putchar(10);
 }
