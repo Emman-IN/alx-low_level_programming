@@ -9,7 +9,7 @@ int main(void)
 {
 	double first = 0;
 	double second = 1;
-	int i, quantity = 98;
+	double i, quantity = 98;
 	double new = 0;
 
 	new = first + second;
@@ -29,4 +29,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-
