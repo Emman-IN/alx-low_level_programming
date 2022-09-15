@@ -7,15 +7,15 @@
 
 int main(void)
 {
-	long first = 0;
-	long second = 1;
+	double first = 0;
+	double second = 1;
 	int i, quantity = 98;
-	long new = 0;
+	double new = 0;
 
 	for (i = 0; i < quantity; i++)
 	{
 		new = first + second;
-		printf("%lu", new);
+		printf("%.0f", new);
 		first = second;
 		second = new;
 		new = first + second;
