@@ -17,13 +17,7 @@ void print_diagonal(int n)
 			for (j = 0; j < i; j++)
 			{
 				_putchar(' ');
-				/**
-				* this loop dosent get executed
-				* in the first iteration of i
-				* its == i
-				*/
 			}
-
 			_putchar('\\');
 			_putchar('\n');
 		}
