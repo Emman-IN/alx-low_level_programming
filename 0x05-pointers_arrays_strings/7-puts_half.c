@@ -1,9 +1,19 @@
 #include "main.h"
 
 /**
+ * _strlen - gets the string length
  * puts_half - prints half of a string, followed by a new line
  * @str: string to be evaluated
  */
+
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
+}
 
 void puts_half(char *str)
 {
