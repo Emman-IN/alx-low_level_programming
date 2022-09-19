@@ -18,11 +18,11 @@ int _strlen(char *s)
 
 void rev_string(char *s)
 {
-	int i = 0;
+	int j, i = 0;
 
 	char rev[_strlen(s)];
 
-	for (int j = _strlen(s) - 1; j >= 0; j--)
+	for (j = _strlen(s) - 1; j >= 0; j--)
 	{
 		rev[i] = s[j];
 		i += 1;
