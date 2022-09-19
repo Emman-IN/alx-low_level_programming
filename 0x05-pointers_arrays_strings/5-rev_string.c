@@ -20,11 +20,21 @@ int _strlen(char *s)
 
 void rev_string(char *s)
 {
-	int i;
+	int i, j;
+
+	char rev[_strlen(s)];
 
 	for (i = _strlen(s) - 1; i >= 0; i--)
 	{
-		_putchar(s[i]);
+		rev[j] = s[i];
+		j += 1;
 	}
-	_putchar(10);
+	rev[i] = '\0';
+
+	for (i = 0; rev[i] != '\0'; i++)
+	{
+		s[i] = rev[i];
+	}
+	s[i] = '\0';
 }
+
