@@ -30,8 +30,8 @@ void rev_string(char *s)
 	rev[i] = '\0';
 	for (i = 0; rev[i] != '\0'; i++)
 	{
-		putchar(rev[i]);
+		_putchar(rev[i]);
 	}
 
-	putchar(10);
+	_putchar(10);
 }
