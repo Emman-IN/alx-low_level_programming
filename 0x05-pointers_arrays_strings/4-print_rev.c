@@ -2,7 +2,7 @@
 
 /**
  * _strlen - gets the length of the string
- * print_rev - reverse the string
+ * print_rev: reverse the string
  * @s: string to be reversed
  * Return: the integer length of the string
  */
