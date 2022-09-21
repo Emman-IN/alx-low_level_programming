@@ -3,7 +3,7 @@
 /**
  * _strcmp - compares two string
  * @s1: string one
- * @s2: string 2
+ * @s2: string
  * Return: difference of the ascii codes ints
  */
 
@@ -17,7 +17,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			return (0);
 		}
-		else		
+		else
 		{
 			return (s1[i] - s2[i]);
 		}
