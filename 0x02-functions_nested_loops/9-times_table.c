@@ -15,23 +15,30 @@ void times_table(void)
 			k = i * j;
 			first = k / 10;
 			last = k % 10;
-			if (k < 10)
+			if (j == 0)
 			{
-				_putchar(' ');
 				_putchar(last + '0');
 			}
 			else
 			{
-				_putchar(first + '0');
-				_putchar(last + '0');
+				if (k >= 0 && k < 10)
+				{
+					_putchar(' ');
+					_putchar(last + '0');
+				}
+				else
+				{
+					_putchar(first + '0');
+					_putchar(last + '0');
+				}
 			}
-			if (j != 9)
+			if (j < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
 
