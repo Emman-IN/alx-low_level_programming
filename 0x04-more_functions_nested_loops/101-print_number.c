@@ -22,7 +22,7 @@ void print_number(int n)
 	}
 	else if (n > 9)
 	{
-		print_nber(n / 10);
-		print_nber(n % 10);
+		print_number(n / 10);
+		print_number(n % 10);
 	}
 }
