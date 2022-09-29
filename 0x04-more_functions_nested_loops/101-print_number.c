@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_nber - prints an integer
- * @n: nber to print
+ * print_number - prints an integer
+ * @n: number to print
  */
 
-void print_nber(int n)
+void print_number(int n)
 {
 	if (n < 0)
 	{
