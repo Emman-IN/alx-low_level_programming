@@ -16,7 +16,7 @@ int main(void)
 	for (i = 0; i < quantity; i++)
 	{
 
-		printf("%Lf", new);
+		printf("%.0Lf", new);
 		first = second;
 		second = new;
 		new = first + second;
