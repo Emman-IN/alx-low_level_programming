@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	double first = 0;
-	double second = 1;
-	double i, quantity = 98;
-	double new = 0;
+	long double first = 0;
+	long double second = 1;
+	long double i, quantity = 98;
+	long double new = 0;
 
 	new = first + second;
 	for (i = 0; i < quantity; i++)
