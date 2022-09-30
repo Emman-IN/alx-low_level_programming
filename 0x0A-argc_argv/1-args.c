@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints its name, followed by newline
+ * main  - prints number of arguement passed
  * @argc: argument count
  * @argv: arguement vector (1-D array of strings)
  * Return: Always 0 (success)
