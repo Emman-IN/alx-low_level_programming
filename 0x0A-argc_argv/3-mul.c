@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -14,9 +14,13 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		m = _atoi(argv[1]) * _atoi(argv[2]);
+		m = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", m);
 	}
-	printf("Error\n");
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 	return (0);
 }
