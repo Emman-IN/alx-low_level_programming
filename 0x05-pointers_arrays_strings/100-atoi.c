@@ -10,7 +10,6 @@ int _atoi(char *s)
 {
 	int a, i;
 	unsigned int res = 0;
-	int sign = 1;
 
 	for (a = 0; s[a]; a++)
 	{
@@ -34,5 +33,5 @@ int _atoi(char *s)
 			}
 		}
 	}
-	return (sign * res);
+	return (res);
 }
