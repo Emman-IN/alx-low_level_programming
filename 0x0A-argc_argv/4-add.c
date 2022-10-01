@@ -11,8 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
-	int sum, num;
+	int i, j, sum, num;
 
 	if (argc == 1)
 	{
@@ -21,7 +20,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; j < strlen(argv[i]); j++)
+		for (j = 0; j < (int)strlen(argv[i]); j++)
 		{
 			num = argv[i][j];
 			if (num < '0' || num > '9')
