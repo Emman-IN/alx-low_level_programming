@@ -9,21 +9,19 @@
  */
 
 
-
 char *_strdup(char *str)
 {
 	size_t i, len;
 	char *new_str;
 
-	for (len = 0; str[len]; len++)
-		;
-
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	for (len = 0; str[len]; len++)
+		;
+	new_str = (char *)malloc(sizeof(char) * len);
 
-	new_str = (char *)malloc(sizeof(char) * len + 1);
 	if (new_str == NULL)
 	{
 		return (NULL);
@@ -34,6 +32,5 @@ char *_strdup(char *str)
 		new_str[i] = str[i];
 	}
 
-	new_str[i] = '\0';
 	return (new_str);
 }
