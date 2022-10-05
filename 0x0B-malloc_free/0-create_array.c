@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * create_array - creates array with one char
+ * create_array - creates char array
+ * and fills it witha a specific character (memset)
  * @size: size of array
  * @c: char to fill array with
  * Return: array created
