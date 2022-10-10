@@ -9,7 +9,6 @@
  * @age: is the age element
  * @owner: is the owner element
  */
-struct dog dog_t;
 struct dog
 {
 	char *name;
