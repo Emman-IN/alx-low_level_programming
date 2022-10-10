@@ -1,9 +1,14 @@
-#ifndef MAIN
-#define MAIN
+#ifndef DOG
+#define DOG
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
+/**
+ * struct dog - is a structure for a dog object
+ * @name: is the name element
+ * @age: is the age element
+ * @owner: is the owner element
+ */
 struct dog
 {
 	char *name;
