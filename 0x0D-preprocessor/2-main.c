@@ -2,13 +2,12 @@
 
 /**
 * main - Entry point
-* @argc: arguement count
-* @argv: array of arguements
 * Return: 0
 */
 
-int main(int __attribute__((unused)) argc, char *argv[])
+int main(void)
 {
 	puts(__FILE__);
+	putchar(10);
 	return (0);
 }

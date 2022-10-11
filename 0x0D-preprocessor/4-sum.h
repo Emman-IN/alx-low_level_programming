@@ -1,5 +1,5 @@
 #ifndef SUMH
-#define #SUMH
+#define SUMH
 
 #define SUM(x, y) ((x) + (y))
 #endif
