@@ -8,17 +8,16 @@
  * Return: pointer to the string
  */
 
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 	size_t len1, len2, i;
 
-	if (s1 == NULL)
+	if (!s1)
 	{
 		s1 = "";
 	}
-	if (s2 == NULL)
+	if (!s2)
 	{
 		s2 = "";
 	}
@@ -29,10 +28,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 
 	ptr = malloc(len1 + n + 1);
-	if (ptr == NULL)
+	if (!ptr)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; s1[i]; i++)
 	{
 		ptr[i] = s1[i];
@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = len2;
 	}
-	for (i = 0; i < n && s2[i]; i++)
+	for (i = 0; i < n; i++)
 	{
 		ptr[len1 + i] = s2[i];
 	}
