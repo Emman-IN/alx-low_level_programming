@@ -9,6 +9,6 @@
 
 int main(int __attribute__((unused)) argc, char * argv[])
 {
-	puts(argv[0]);
+	puts(__FILE__);
 	return (0);
 }
