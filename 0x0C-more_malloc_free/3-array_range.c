@@ -3,7 +3,6 @@
  * ptr_range - creates an ptr and initialises an ptr of int
  * @min: min index of ptr
  * @max: max index of ptr
- *
  * Return: pointer to created ptr
  */
 
