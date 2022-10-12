@@ -1,12 +1,12 @@
 #include"main.h"
 /**
- * ptr_range - creates an ptr and initialises an ptr of int
+ * array_range - creates an ptr and initialises an ptr of int
  * @min: min index of ptr
  * @max: max index of ptr
  * Return: pointer to created ptr
  */
 
-int *ptr_range(int min, int max)
+int *array_range(int min, int max)
 {
 	int *ptr;
 	int i;
