@@ -21,8 +21,14 @@ int *array_range(int min, int max)
 
 	for (i = 0; i <= max; i++)
 	{
-		ptr[i] = i;
+		ptr[i] = min++;
 	}
-
+	/**
+	 * for (i = min; i <= max; i++)
+	 *{
+	 *ptr[i-min] = i;
+	 *}
+	 *since were initialising with values of m
+	 */
 	return (ptr);
 }
