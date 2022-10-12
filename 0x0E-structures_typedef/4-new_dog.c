@@ -26,7 +26,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	dog->name = malloc(len_name);
+	dog->name = malloc(len_name + 1);
 	if (dog->name == NULL)
 	{
 		free(dog);
@@ -38,7 +38,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	dog->age = age;
 	/** always 4bytes since its an int*/
-	dog->owner = malloc(len_owner);
+	dog->owner = malloc(len_owner + 1);
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
