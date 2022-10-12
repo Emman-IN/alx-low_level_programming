@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	mem = ptr;
 	/**
 	 * mem points to same memory as ptr
-	*/
+	 */
 	for (i = 0; i < sum; i++)
 	{
 		mem[i] = '\0';
