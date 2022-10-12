@@ -26,7 +26,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (len2 = 0; s2[len2]; len2++)
 		;
-
+	if (n >= len2)
+	{
+		n = len2;
+	}
 	ptr = malloc(len1 + n + 1);
 	if (!ptr)
 	{
@@ -37,10 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[i] = s1[i];
 	}
-	if (n >= len2)
-	{
-		n = len2;
-	}
+
 	for (i = 0; i < n; i++)
 	{
 		ptr[len1 + i] = s2[i];

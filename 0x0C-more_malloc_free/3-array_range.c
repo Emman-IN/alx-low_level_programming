@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 	 *{
 	 *ptr[i-min] = i;
 	 *}
-	 *since were initialising with values of m
+	 *since we're initialising with values of m
 	 */
 	return (ptr);
 }
