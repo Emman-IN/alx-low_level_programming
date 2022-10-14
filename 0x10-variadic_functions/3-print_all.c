@@ -5,7 +5,6 @@
  * @format: types of arguments passed to the function
  */
 
-
 void print_all(const char *const format, ...)
 {
 	size_t i;
@@ -13,7 +12,6 @@ void print_all(const char *const format, ...)
 	char *str;
 
 	va_start(ptr, format);
-
 	while (format && format[i])
 	{
 		switch (format[i])
@@ -33,16 +31,17 @@ void print_all(const char *const format, ...)
 				{
 					printf("(nil)");
 				}
-				printf("%s", str);
-				break;
+				if (str)
+					printf("%s", str);
 			default:
 				break;
 		}
-		if (format[i + 1] != '\0' &&
+		while (format[i + 1] != '\0' &&
 				(format[i] == 'c' || format[i] == 'i' ||
 				 format[i] == 'f' || format[i] == 's'))
 		{
 			printf(", ");
+			break;
 		}
 		i++;
 	}
