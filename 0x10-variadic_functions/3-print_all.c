@@ -5,17 +5,16 @@
  * @format: types of arguments passed to the function
  */
 
-void print_all(const char * const format, ...)
+
+void print_all(const char *const format, ...)
 {
-	size_t i = 0, len = 0;
+	size_t i;
+	va_list ptr;
 	char *str;
 
-	va_list ptr;
-
-	while (format[len])
-		len++;
 	va_start(ptr, format);
-	while (i < len)
+
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
@@ -30,21 +29,23 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(ptr, char *);
-				if (str)
+				if (!str)
 				{
-					printf("%s", str);
-				}
-				else
 					printf("(nil)");
+				}
+				printf("%s", str);
 				break;
 			default:
 				break;
 		}
-		if (i < len - 1 && (format[i] == 'c' || format[i] == 'i' ||
-					format[i] == 'f' || format[i] == 's'))
+		if (format[i + 1] != '\0' &&
+				(format[i] == 'c' || format[i] == 'i' ||
+				 format[i] == 'f' || format[i] == 's'))
 		{
 			printf(", ");
-		} i++;
-	} putchar(10);
+		}
+		i++;
+	}
+	putchar(10);
 	va_end(ptr);
 }
