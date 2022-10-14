@@ -6,6 +6,8 @@
  * @n: number of strings
  */
 
+
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	size_t i;
@@ -21,6 +23,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
+		else
+		{
+			printf("nil");
+		}
 		if (i < n - 1 && separator)
 		{
 			printf("%s", separator);
@@ -29,3 +35,4 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	putchar(10);
 	va_end(ptr);
 }
+
