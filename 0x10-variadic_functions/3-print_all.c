@@ -7,12 +7,14 @@
 
 void print_all(const char *const format, ...)
 {
-	size_t i;
+	size_t i = 0, len = 0;
 	va_list ptr;
 	char *str;
 
 	va_start(ptr, format);
-	while (format && format[i])
+	while (format[len])
+		len++;
+	while (format[i])
 	{
 		switch (format[i])
 		{
@@ -26,22 +28,20 @@ void print_all(const char *const format, ...)
 				printf("%f", va_arg(ptr, double));
 				break;
 			case 's':
-				str = va_arg(ptr, char *);
-				if (!str)
+				if (!va_arg(ptr, char *))
 				{
 					printf("(nil)");
+					break;
 				}
-				if (str)
-					printf("%s", str);
+				printf("%s", va_arg(ptr, char *));
+				break;
 			default:
+				printf("Invalid format\n");
 				break;
 		}
-		while (format[i + 1] != '\0' &&
-				(format[i] == 'c' || format[i] == 'i' ||
-				 format[i] == 'f' || format[i] == 's'))
+		if (i < len - 1)
 		{
 			printf(", ");
-			break;
 		}
 		i++;
 	}
