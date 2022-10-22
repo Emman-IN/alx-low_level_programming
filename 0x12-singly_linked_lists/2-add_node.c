@@ -7,30 +7,25 @@
  * Return: the address of the new element, or NULL if it failed
  */
 
-list_t *add_node(list_t **head, const char *str)
+ist_t *add_node(list_t **head, const char *str)
 {
-	list_t *newnode;
-	int i;
+	int i = 0;
+	char *ns = strdup(str);
+	list_t *newNode = malloc(sizeof(list_t));
 
-	char *nstr = strdup(str);
-	newnode = malloc(sizeof(list_t));
-
-	if (!newnode)
-	{
+	if (newNode == NULL)
 		return (NULL);
-	}
-	if (!nstr)
-	{
-		nstr = "(nil)";
-	}
-	newnode->str = strdup(nstr);
-	while (nstr[i])
-	{
-		i++;
-	}
-	newnode->len = i;
 
-	newnode->next = *head;
-	*head = newnode;
-	return (newnode);
+	if (ns == NULL)
+		ns = "(nil)";
+
+	while (ns[i])
+		i++;
+
+	newNode->str = ns;
+	newNode->len = i;
+	newNode->next = (*head);
+	(*head) = newNode;
+
+	return (newNode);
 }
