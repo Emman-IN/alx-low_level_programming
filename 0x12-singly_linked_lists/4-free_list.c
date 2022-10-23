@@ -7,18 +7,12 @@
 
 void free_list(list_t *head)
 {
-	list_t *current;
+	list_t *current = head;
 
 	while (head)
 	{
-		current = head;
-		head = head->next;
-		free(current);
+		current = current->next;
+		free(head);
+		head = current->next;
 	}
-	/**
-	 * check that first is not null
-	 * current points to head node
-	 * head reference points to next node
-	 * then remove first node
-	 */
 }
