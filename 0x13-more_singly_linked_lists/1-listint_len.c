@@ -6,19 +6,20 @@
  * Return: number of nodes or elements in a list
  */
 
+
+
 size_t listint_len(const listint_t *h)
 {
+	const listint_t *temp = h;
 
-	const listint_t *current = h;
+	int i = 0;
 
-	int count = 0;
-
-	while (h != NULL)
+	while (temp != NULL)
 	{
-		count++;
-		current = current->next;
+		i++;
+		temp = temp->next;
 	}
 
-	return (count);
+	return (i);
 }
 
