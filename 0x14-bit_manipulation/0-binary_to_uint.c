@@ -9,6 +9,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len, num = 0, bit;
+	int i;
 
 	if (b == NULL)
 	{
@@ -16,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (len = 0; b[len]; len++)
 		;
-	for (size_t i = 0; b[i]; i++)
+	for (i = 0; b[i]; i++)
 	{
 		bit = b[i] - 48;
 		if (bit > 1)
