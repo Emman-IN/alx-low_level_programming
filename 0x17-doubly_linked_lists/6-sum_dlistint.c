@@ -14,11 +14,6 @@ int sum_dlistint(dlistint_t *head)
 
 	sum = 0;
 
-	if ((int) dlistint_len(head) == 0)
-	{
-		return (0);
-	}
-
 	while (current)
 	{
 		sum += current->n;
