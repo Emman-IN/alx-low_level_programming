@@ -9,9 +9,10 @@
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
-	dlistint_len *current;
 
-	current = head;
+	dlistint_len *current = head;
+
+	sum = 0;
 
 	if ((int) dlistint_len(head) == 0)
 	{
