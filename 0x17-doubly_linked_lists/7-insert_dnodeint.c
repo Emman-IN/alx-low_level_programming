@@ -12,6 +12,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
  * Return: the address of the new node, or NULL if it failed
  */
 
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newnode;
@@ -20,18 +21,38 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	int i = 0;
 
 	newnode = malloc(sizeof(dlistint_t));
-	if (!newnode || !idx || (int)idx > (int)dlistint_len(*h))
+
+	if (!newnode || (int)idx < 0 || (int)idx > (int)dlistint_len(*h))
 	{
 		return (NULL);
 	}
 	newnode->n = n;
 	if (idx == 0)
 	{
-		newnode = add_dnodeint(h, n);
+		if (!*h)
+		{
+			newnode->next = NULL;
+			newnode->prev = NULL;
+			*h = newnode;
+		}
+		else
+		{
+			newnode->next = *h;
+			newnode->prev = NULL;
+			newnode->next->prev = newnode;
+			*h = newnode;
+		}
 	}
 	else if ((int)idx == (int)dlistint_len(*h))
 	{
-		newnode = add_dnodeint_end(h, n);
+		current = *h;
+		while (current->next)
+		{
+			current = current->next;
+		}
+		newnode->next = NULL;
+		newnode->prev = current;
+		current->next = newnode;
 	}
 	else
 	{
@@ -47,85 +68,3 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	return (newnode);
 }
-
-
-/**
- * add_dnodeint - adds a new node at the beginning of a dlistint_t list
- * @head: pointer to the head node
- * @n: data to be added to new nodde
- * Return: address of the new element, or NULL if it failed
- */
-
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{
-	dlistint_t *newnode;
-
-	newnode = malloc(sizeof(dlistint_t));
-
-	if (!newnode)
-	{
-		return (NULL);
-	}
-
-	newnode->n = n;
-	newnode->prev = NULL;
-
-	if (*head == NULL)
-	{
-		newnode->next = NULL;
-		*head = newnode;
-	}
-	else
-	{
-		newnode->next = *head;
-		(*head)->prev = newnode;
-		*head = newnode;
-	}
-	return (newnode);
-}
-
-/**
- * add_dnodeint_end - adds a new node at the end of a dlistint_t list
- * @head: pointer to head node
- * @n: data of node
- * Return: the address of the new element, or NULL if it failed
- */
-
-
-
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
-{
-	dlistint_t *newnode;
-	dlistint_t *current;
-
-	newnode = malloc(sizeof(dlistint_t));
-	current = *head;
-
-	if (!newnode)
-	{
-		return (NULL);
-	}
-
-	newnode->n = n;
-
-	if (!*head)
-	{
-		newnode->prev = NULL;
-		newnode->next = NULL;
-		*head = newnode;
-	}
-	else
-	{
-		current = *head;
-		while (current->next)
-		{
-			current = current->next;
-		}
-		newnode->next = NULL;
-		current->next = newnode;
-		newnode->prev = current;
-	}
-	return (newnode);
-}
-
-
