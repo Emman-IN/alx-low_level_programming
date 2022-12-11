@@ -24,15 +24,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx == 0)
 	{
 		if (!*head)
-		{
 			newnode->next = NULL;
 			*head = newnode;
-		}
 		else
-		{
 			newnode->next = *head;
 			*head = newnode;
-		}
 	}
 	else
 	{
@@ -44,15 +40,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			current = current->next;
 		}
 		if (!current->next)
-		{
 			newnode->next = NULL;
 			current->next = newnode;
-		}
 		else
-		{
 			newnode->next = current->next;
 			current->next = newnode;
-		}
 	}
 	return (newnode);
 }
